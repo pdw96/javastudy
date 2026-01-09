@@ -1,0 +1,27 @@
+import java.time.LocalDateTime;
+
+public class Posting {
+    private final long id;
+    private String company;
+    private String title;
+    private String url;
+    private final LocalDateTime createdAt;
+
+    public Posting(long id, String company, String title, String url) {
+        this.id = id;
+        this.company = company;
+        this.title = title;
+        this.url = url;
+        this.createdAt = LocalDateTime.now();
+    }
+
+    public long getId() { return id; }
+    public String getCompany() { return company; }
+    public String getTitle() { return title; }
+    public String getUrl() { return url; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+
+    public void setCompany(String company) { this.company = company; }
+    public void setTitle(String title) { this.title = title; }
+    public void setUrl(String url) { this.url = url; }
+}
