@@ -5,13 +5,15 @@ public class Posting {
     private String company;
     private String title;
     private String url;
+    private String location;
     private final LocalDateTime createdAt;
 
-    public Posting(long id, String company, String title, String url) {
+    public Posting(long id, String company, String title, String url, String location) {
         this.id = id;
         this.company = company;
         this.title = title;
         this.url = url;
+        this.location = location;
         this.createdAt = LocalDateTime.now();
     }
 
@@ -19,9 +21,11 @@ public class Posting {
     public String getCompany() { return company; }
     public String getTitle() { return title; }
     public String getUrl() { return url; }
+    public String getLocation() { return location; }
     public LocalDateTime getCreatedAt() { return createdAt; }
 
     public void setCompany(String company) { this.company = company; }
     public void setTitle(String title) { this.title = title; }
     public void setUrl(String url) { this.url = url; }
+    public void setLocation(String location) { this.location = location; }
 }
