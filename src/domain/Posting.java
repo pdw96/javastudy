@@ -1,3 +1,5 @@
+package domain;
+
 import java.time.LocalDateTime;
 
 public class Posting {
@@ -15,6 +17,11 @@ public class Posting {
         this.url = url;
         this.location = location;
         this.createdAt = LocalDateTime.now();
+    }
+
+    // (옵션) location 없이 만들 때를 대비한 오버로드
+    public Posting(long id, String company, String title, String url) {
+        this(id, company, title, url, "");
     }
 
     public long getId() { return id; }
